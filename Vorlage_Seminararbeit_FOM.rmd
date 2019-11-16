@@ -1,0 +1,186 @@
+---
+title: "Spannende Hausarbeit mit quantitativen Methoden"
+subtitel: "Modul: Datenerhebung und Statistik"
+author: "Student Kannalles, Matrikelnummer 0042"
+date: "`r Sys.Date()`"
+geometry: 
+  - left=3cm
+  - right=2cm
+  - top=2cm
+  - bottom=2cm
+mainfont: "Constantia"
+fontsize: 12
+documentclass: article
+header-includes:
+  - \usepackage{titling}
+  - \pretitle{\begin{center}\LARGE\includegraphics[width=3.5cm]{FOM-logo.pdf}\\[\bigskipamount]}
+  - \posttitle{\end{center}}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+output:
+  pdf_document:
+    fig_caption: yes
+    latex_engine: xelatex
+    fig_height: 3
+    fig_width: 5
+    toc: no
+    highlight: tango
+  word_document:
+    toc: yes
+lang: de-DE
+editor_options:
+  chunk_output_type: console
+bibliography: Exportierte Eintraege.bib
+csl: apa.csl
+---
+
+
+\pagenumbering{gobble} 
+
+
+
+\renewcommand{\listfigurename}{  }
+\renewcommand{\listtablename}{  }
+
+\pagebreak
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\section{Abbildungsverzeichnis}
+  \listoffigures
+\newpage
+\section{Tabellenverzeichnis}
+  \listoftables
+
+
+\newpage
+\pagenumbering{arabic}
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.path = 'Abbildung/', 
+  warning = FALSE, 
+  message = FALSE, 
+  #echo = TRUE,
+  fig.align ="center")
+
+
+library(mosaic) # Das Paket mosaic wird geladen
+
+#getwd()
+#setwd("D:/Tanja/FOM_Vorbereitung/1.Quant_Meth_Neu_Sortiert/Thema_Seminararbeit")
+
+options(tinytex.verbose = TRUE)
+```
+
+<!-- Sollten Umlaute falsch angezeigt werden - so mit UTF-8-Codierung neu öffnen und speichern "File -> save with encodings -> Reopen with Encoding -> UTF8"    /ggf. Umlaute dann nochmal korrigieren -->
+
+\pagebreak
+
+
+# 1. Einleitung / Hintergrund  / Stand der Forschung
+Führen Sie ins Thema ein.   
+Warum ist das Thema wichtig zu beforschen?  
+Wie ist der aktuelle Stand der Forschung?   
+Was ist das Ziel der Studie?  
+
+Im Theorieteil Teil wird anhand der Literatur und dem Stand der Wissenschaft die Forschungsfrage und die Hypothesen hergeleitet. 
+- Was ist die Forschungsfragestellung (= Forschungsfrage)?
+- Welche Hypothese(n)/ welches Modell untersuchen Sie? (Die Nullhypothese wird nicht genannt)
+    - Hypothese 1
+    - Hypothese 2 
+    - ...
+Die NUllhypothese wird dabei nicht genannt nur die Forschungshypothesen werden angegeben.
+
+Geben Sie hierzu mind. 3 wissenschaftliche Literaturquellen an - die Zitation der gesamten Arbeit erfolgt nach APA-Standard. Eine csl Datei liegt für Sie im ZIP-ORdner bereit.
+
+
+# 2. Methodenteil  
+
+## 2.1. Studiendesign
+
+Beschreiben Sie kurz das Studiendesign
+
+## 2.2. Datenerhebung
+
+Gehen Sie kurz auf die Datenerhebung der Studie ein.
+
+## 2.3. angewandte statistische Methoden/ Datenanalyse
+
+Hier werden die jeweiligen UV und AV der jeweiligen Hypothesen inklusive der statistischen Methoden aufgeführt und genannt.
+
+Gehen Sie kurz auf die angewandten statistischen Methoden ein, und ggf. was für Voraussetzungen geprüft wurden.
+Geben Sie die Referenz von R an, sowie die Version, sowie die genutzen Pakete.
+
+(Tipp: Die Information zur R-Version erhalten Sie bei jedem Start in der Console.)
+Geben Sie hierfür den Befehl: `citation()` ein und Sie erhalten die Information, wie R zu zitieren ist.
+
+
+# 3. Ergebnisse    
+
+Hier erfolgt die Darstellung der Ergebnisse der explorativen- und der inferenzstatistischen Auswertung. Für die richtige Darstellung richten Sie sich ggf. nach dem Leitfaden.
+
+Hier stellen und beschreiben Sie die Ergebnisse Ihrer kleinen Studie. Ihre Ergebnisse stellen Sie graphisch und/ oder tabellarisch dar.
+Ganz allgemein wird im Resultateteil nicht im Kontext zur Literatur bzw. anderen Studien interpretiert, sondern die Ergebnisse ausschließlich beschrieben und diese interpretiert (was bedeutet das erhaltene Ergebnis).
+
+Der Ergebnisteil kann zur besseren Orientierung und zum besseren Lesen weitere Gliederungspunkte enthalten.
+
+* die Abbildungen werden durchnummeriert  (Abbildung 1 bis Abbildung xx) ebenso die Tabellen.
+* Jede Abbildung erhält eine *Bildunterschrift* (Unter der Abb.) und jede Tabelle eine Beschreibung über der Tabelle).
+  - die Bildunterschrift können Sie mit `fig.cap` (siehe Chunk unten) R markdown machen. Eine Vorlage für eine Bildunterschrift ist im Template enthalten.
+
+Beispiel für Ergebisbeschreibung und einer Figure caption  = Bildunterschrift:
+
+
+```{r fig.cap =  "Die Kelchblattlängen der untersuchten Spezies der Schwertlilien unterscheiden sich signifikant. Dargestellt sind die Kelchblattlängen der drei Spezies der Schwertlilien (iris versicolor, iris setosa und iris virginica). Sie Kelchblattlängen zeigen unterschiedliche Längen, wobei iris setosa die kürzesten und Iris virginica die längsten Kelchblätter zeigt.p= x.xxx", fig.height=4, fig.width=4 } 
+
+gf_boxplot(Sepal.Length ~ Species, data = iris)
+```
+
+
+
+Die Ergebnisse graphisch und tabellarisch dargestellt. Eine tabellarische Darstellung der Ergebnisse ist im Teil der deskriptiven Statistik oft sinnvoll.
+Sie entscheiden hier was eine sinnvolle Darstellung ist!
+ 
+
+Beschreiben Sie das zentrale Ergebnis und Auffälligkeiten.
+
+
+**Folgendes sollte im Ergebnisteil enthalten/ ver- oder beararbeitet sein: **
+
+  1. Kennzahlen
+  2. explorative / deskriptive Statistik
+  3. Inferenzstatistik
+
+
+Beschreiben Sie Ihre Stichprobe und Ihre Variablen. 
+Das ist hilfreich zum Verständnis und Nachvollziehbarkeit Ihrer Studie, der Datenerhebung und der Hypothesentestung.  
+
+## Inferenzstatistik
+
+Gehen Sie hier genauer auf die untersuchten Hypothesen und Modelle ein.
+
+```{r fig.cap="Hier steht Ihre Bildunterschrift zur Abbildung im gleichen Chunk. Damit die Bildunterschrift passend zur Abb ausgegeben wird, ist nur eine Abb. und eine Bildunterschrift pro Chunk möglich."}
+# Exemplarisches Beispiel
+reg <- lm(Petal.Length ~ Petal.Width, data = iris)
+plotModel(reg)
+```
+
+
+# 4. Diskussion
+
+Für die Diskussion setzen Sie das Ergebnis in Kontext zu bereits publizierter Literatur! (hier ist das Lesen und die Angabe (CAVE: richtig zitieren) von Literatur notwendig) Mind. 3 Literaturquellen. 
+Des Weiteren setzen Sie sich in der Diskussion kritisch mit Ihren Ergebnissen, sowie der angwandten Methoden und deren Limitationen auseinander. Anbei noch ein Beispiel für die Zitation, sowie gute Referenzen für R, Statistik und Rmarkdown[@grolemund_r_2017; @kim_introduction_2018; @xie_r_2018].
+
+# 5. Schlussfolgerungen
+
+Fassen Sie hier kurz die zentralen Ergebnisse für Ihre Forschungsthematik zusammen und gehen Sie kurz darauf ein, was Ihre Ergebnisse/ Ihr Ergebnis für die Praxis bedeuten/bedeutet.
+
+# Literaturverzeichnis
+
+Hier stehen die im Text verwendeten Quellen:
+Zitation erfolgt nach APA.
+Kontrollieren Sie bitte Ihre Zitation nach Fertigstellung der Arbeit.

@@ -61,16 +61,18 @@ csl: apa.csl
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  fig.path = 'Abbildung/', 
-  warning = FALSE, 
-  message = FALSE, 
+  fig.path = 'Abbildung/', # Unterverzeichnis für die erstellten Abbildungen
+  warning = FALSE,         # Warnungen nicht ins Zieldokument
+  message = FALSE,         # Mittelungen nicht ins Zieldokument
   #echo = TRUE,
-  fig.align ="center")
-
+  fig.align ="center"      # Abbildungen (immer) zentrieren.
+)
 
 library(mosaic) # Das Paket mosaic wird geladen
 
+# Akutelles Arbeitsverzeichnis ansehen:
 #getwd()
+# Setzen des aktuellen Arbeitsverzeichnisses:
 #setwd("D:/Tanja/FOM_Vorbereitung/1.Quant_Meth_Neu_Sortiert/Thema_Seminararbeit")
 
 options(tinytex.verbose = TRUE)
@@ -87,26 +89,31 @@ Warum ist das Thema wichtig zu beforschen?
 Wie ist der aktuelle Stand der Forschung?   
 Was ist das Ziel der Studie?  
 
-Im Theorieteil Teil wird anhand der Literatur und dem Stand der Wissenschaft die Forschungsfrage und die Hypothesen hergeleitet. 
+Im Theorieteil wird anhand der Literatur und dem Stand der Wissenschaft die Forschungsfrage und die Hypothesen hergeleitet.
+
 - Was ist die Forschungsfragestellung (= Forschungsfrage)?
+
 - Welche Hypothese(n)/ welches Modell untersuchen Sie? (Die Nullhypothese wird nicht genannt)
     - Hypothese 1
     - Hypothese 2 
     - ...
-Die NUllhypothese wird dabei nicht genannt nur die Forschungshypothesen werden angegeben.
+    
+Die Nullhypothese wird dabei nicht genannt nur die Forschungshypothesen werden angegeben.
 
-Geben Sie hierzu mind. 3 wissenschaftliche Literaturquellen an - die Zitation der gesamten Arbeit erfolgt nach APA-Standard. Eine csl Datei liegt für Sie im ZIP-ORdner bereit.
+Geben Sie hierzu mind. 3 wissenschaftliche Literaturquellen an - die Zitation der gesamten Arbeit erfolgt nach APA-Standard. Eine *csl* Datei liegt für Sie im ZIP-Ordner bereit.
 
 
 # 2. Methodenteil  
 
 ## 2.1. Studiendesign
 
-Beschreiben Sie kurz das Studiendesign
+Beschreiben Sie kurz das Studiendesign.
+
 
 ## 2.2. Datenerhebung
 
 Gehen Sie kurz auf die Datenerhebung der Studie ein.
+
 
 ## 2.3. angewandte statistische Methoden/ Datenanalyse
 
@@ -115,7 +122,7 @@ Hier werden die jeweiligen UV und AV der jeweiligen Hypothesen inklusive der sta
 Gehen Sie kurz auf die angewandten statistischen Methoden ein, und ggf. was für Voraussetzungen geprüft wurden.
 Geben Sie die Referenz von R an, sowie die Version, sowie die genutzen Pakete.
 
-(Tipp: Die Information zur R-Version erhalten Sie bei jedem Start in der Console.)
+(*Tipp:* Die Information zur R-Version erhalten Sie bei jedem Start in der Console.)
 Geben Sie hierfür den Befehl: `citation()` ein und Sie erhalten die Information, wie R zu zitieren ist.
 
 
@@ -159,6 +166,7 @@ Beschreiben Sie das zentrale Ergebnis und Auffälligkeiten.
 Beschreiben Sie Ihre Stichprobe und Ihre Variablen. 
 Das ist hilfreich zum Verständnis und Nachvollziehbarkeit Ihrer Studie, der Datenerhebung und der Hypothesentestung.  
 
+
 ## Inferenzstatistik
 
 Gehen Sie hier genauer auf die untersuchten Hypothesen und Modelle ein.
@@ -173,11 +181,13 @@ plotModel(reg)
 # 4. Diskussion
 
 Für die Diskussion setzen Sie das Ergebnis in Kontext zu bereits publizierter Literatur! (hier ist das Lesen und die Angabe (CAVE: richtig zitieren) von Literatur notwendig) Mind. 3 Literaturquellen. 
-Des Weiteren setzen Sie sich in der Diskussion kritisch mit Ihren Ergebnissen, sowie der angwandten Methoden und deren Limitationen auseinander. Anbei noch ein Beispiel für die Zitation, sowie gute Referenzen für R, Statistik und Rmarkdown[@grolemund_r_2017; @kim_introduction_2018; @xie_r_2018].
+Des Weiteren setzen Sie sich in der Diskussion kritisch mit Ihren Ergebnissen, sowie der angwandten Methoden und deren Limitationen auseinander. Anbei noch ein Beispiel für die Zitation, sowie gute Referenzen für R, Statistik und Rmarkdown[@WickhamGrolemund_R_2017; @kim_introduction_2018; @xie_r_2018].
+
 
 # 5. Schlussfolgerungen
 
 Fassen Sie hier kurz die zentralen Ergebnisse für Ihre Forschungsthematik zusammen und gehen Sie kurz darauf ein, was Ihre Ergebnisse/ Ihr Ergebnis für die Praxis bedeuten/bedeutet.
+
 
 # Literaturverzeichnis
 
